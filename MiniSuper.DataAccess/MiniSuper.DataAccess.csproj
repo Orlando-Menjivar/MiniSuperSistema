@@ -52,6 +52,7 @@
     <Compile Include="DetalleInventarioRepository.cs" />
     <Compile Include="EmpleadoRepository.cs" />
     <Compile Include="EstadoProductoRepository.cs" />
+    <Compile Include="EstadoRepository.cs" />
     <Compile Include="EstadoUsuarioRepository.cs" />
     <Compile Include="FormaPagoRepository.cs" />
     <Compile Include="InventarioRepository.cs" />
