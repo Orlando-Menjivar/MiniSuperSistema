@@ -51,6 +51,7 @@
     <Compile Include="Compra.cs" />
     <Compile Include="Estado.cs" />
     <Compile Include="EstadoProducto.cs" />
+    <Compile Include="EstadoProveedor.cs" />
     <Compile Include="EstadoUsuario.cs" />
     <Compile Include="FormaPago.cs" />
     <Compile Include="Inventario.cs" />
