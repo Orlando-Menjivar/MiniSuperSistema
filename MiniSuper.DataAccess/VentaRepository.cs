@@ -42,7 +42,7 @@ namespace MiniSuper.DataAccess
                                 NumeroTicket = rd.GetInt32(2),
                                 UsuarioId = rd.GetInt32(3),
                                 ClienteId = rd.GetInt32(4),
-                                IVA = rd.GetDecimal(5),
+                                Iva = rd.GetDecimal(5),
                                 Subtotal = rd.GetDecimal(6),
                                 Total = rd.GetDecimal(7)
                             };
@@ -77,7 +77,7 @@ namespace MiniSuper.DataAccess
                                 NumeroTicket = rd.GetInt32(2),
                                 UsuarioId = rd.GetInt32(3),
                                 ClienteId = rd.GetInt32(4),
-                                IVA = rd.GetDecimal(5),
+                                Iva = rd.GetDecimal(5),
                                 Subtotal = rd.GetDecimal(6),
                                 Total = rd.GetDecimal(7)
                             };
@@ -100,7 +100,7 @@ namespace MiniSuper.DataAccess
                     cmd.Parameters.AddWithValue("@NumeroTicket", entity.NumeroTicket);
                     cmd.Parameters.AddWithValue("@UsuarioId", entity.UsuarioId);
                     cmd.Parameters.AddWithValue("@ClienteId", entity.ClienteId);
-                    cmd.Parameters.AddWithValue("@IVA", entity.IVA);
+                    cmd.Parameters.AddWithValue("@Iva", entity.Iva);
                     cmd.Parameters.AddWithValue("@Subtotal", entity.Subtotal);
                     cmd.Parameters.AddWithValue("@Total", entity.Total);
                     conn.Open();

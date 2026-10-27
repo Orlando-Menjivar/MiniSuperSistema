@@ -37,11 +37,11 @@ namespace MiniSuper.DataAccess
                         {
                             DetalleInventario entity = new DetalleInventario
                             {
-                                DetalleInventarioId = rd.GetInt32(0),
+                                DetInventarioId = rd.GetInt32(0),
                                 InventarioId = rd.GetInt32(1),
                                 LoteInventarioId = rd.GetInt32(2),
                                 FechaHoraMovimiento = rd.GetDateTime(3),
-                                TipoMovimiento = rd.GetString(4),
+                                TipoMovimientoId = rd.GetInt32(4),
                                 Cantidad = rd.GetInt32(5),
                                 Observacion = rd.GetString(6),
                                 DetVentaId = rd.IsDBNull(7) ? (int?)null : rd.GetInt32(7)
@@ -72,11 +72,11 @@ namespace MiniSuper.DataAccess
                         {
                             entity = new DetalleInventario
                             {
-                                DetalleInventarioId = rd.GetInt32(0),
+                                DetInventarioId = rd.GetInt32(0),
                                 InventarioId = rd.GetInt32(1),
                                 LoteInventarioId = rd.GetInt32(2),
                                 FechaHoraMovimiento = rd.GetDateTime(3),
-                                TipoMovimiento = rd.GetString(4),
+                                TipoMovimientoId = rd.GetInt32(4),
                                 Cantidad = rd.GetInt32(5),
                                 Observacion = rd.GetString(6),
                                 DetVentaId = rd.IsDBNull(7) ? (int?)null : rd.GetInt32(7)
@@ -100,7 +100,7 @@ namespace MiniSuper.DataAccess
                     cmd.Parameters.AddWithValue("@InventarioId", entity.InventarioId);
                     cmd.Parameters.AddWithValue("@LoteInventarioId", entity.LoteInventarioId);
                     cmd.Parameters.AddWithValue("@FechaHoraMovimiento", entity.FechaHoraMovimiento);
-                    cmd.Parameters.AddWithValue("@TipoMovimiento", entity.TipoMovimiento);
+                    cmd.Parameters.AddWithValue("@TipoMovimientoId", entity.TipoMovimientoId);
                     cmd.Parameters.AddWithValue("@Cantidad", entity.Cantidad);
                     cmd.Parameters.AddWithValue("@Observacion", entity.Observacion);
                     cmd.Parameters.AddWithValue("@DetVentaId", (object)entity.DetVentaId ?? DBNull.Value);

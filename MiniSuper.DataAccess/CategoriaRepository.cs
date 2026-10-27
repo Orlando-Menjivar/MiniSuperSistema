@@ -38,7 +38,8 @@ namespace MiniSuper.DataAccess
                             Categoria entity = new Categoria
                             {
                                 CategoriaId = rd.GetInt32(0),
-                                NombreCategoria = rd.GetString(1)
+                                NombreCategoria = rd.GetString(1),
+                                EstadoId = rd.GetInt32(2)
                             };
                             result.Add(entity);
                         }
@@ -67,7 +68,8 @@ namespace MiniSuper.DataAccess
                             entity = new Categoria
                             {
                                 CategoriaId = rd.GetInt32(0),
-                                NombreCategoria = rd.GetString(1)
+                                NombreCategoria = rd.GetString(1),
+                                EstadoId = rd.GetInt32(2)
                             };
                         }
                     }
@@ -86,6 +88,7 @@ namespace MiniSuper.DataAccess
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@NombreCategoria", entity.NombreCategoria);
+                    cmd.Parameters.AddWithValue("@EstadoId", entity.EstadoId);
                     conn.Open();
                     result = Convert.ToInt32(cmd.ExecuteScalar());
                 }
@@ -104,6 +107,7 @@ namespace MiniSuper.DataAccess
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@CategoriaId", entity.CategoriaId);
                     cmd.Parameters.AddWithValue("@NombreCategoria", entity.NombreCategoria);
+                    cmd.Parameters.AddWithValue("@EstadoId", entity.EstadoId);
                     conn.Open();
                     result = cmd.ExecuteNonQuery();
                 }

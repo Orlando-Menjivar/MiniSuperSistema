@@ -37,12 +37,12 @@ namespace MiniSuper.DataAccess
                         {
                             DetalleCompra entity = new DetalleCompra
                             {
-                                DetalleCompraId = rd.GetInt32(0),
-                                Total = rd.GetDecimal(1),
+                                DetCompraId = rd.GetInt32(0),
+                                CompraId = rd.GetInt32(1),
                                 Cantidad = rd.GetInt32(2),
-                                CompraId = rd.GetInt32(3),
-                                ProveedorId = rd.GetInt32(4),
-                                UsuarioId = rd.GetInt32(5)
+                                ProductoId = rd.GetInt32(3),
+                                PrecioCompra = rd.GetDecimal(4),
+                                SubTotal = rd.GetDecimal(5)
                             };
                             result.Add(entity);
                         }
@@ -70,12 +70,12 @@ namespace MiniSuper.DataAccess
                         {
                             entity = new DetalleCompra
                             {
-                                DetalleCompraId = rd.GetInt32(0),
-                                Total = rd.GetDecimal(1),
+                                DetCompraId = rd.GetInt32(0),
+                                CompraId = rd.GetInt32(1),
                                 Cantidad = rd.GetInt32(2),
-                                CompraId = rd.GetInt32(3),
-                                ProveedorId = rd.GetInt32(4),
-                                UsuarioId = rd.GetInt32(5)
+                                ProductoId = rd.GetInt32(3),
+                                PrecioCompra = rd.GetDecimal(4),
+                                SubTotal = rd.GetDecimal(5)
                             };
                         }
                     }
@@ -93,11 +93,11 @@ namespace MiniSuper.DataAccess
                 using (SqlCommand cmd = new SqlCommand("SpDetalleCompraInsert", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Total", entity.Total);
-                    cmd.Parameters.AddWithValue("@Cantidad", entity.Cantidad);
                     cmd.Parameters.AddWithValue("@CompraId", entity.CompraId);
-                    cmd.Parameters.AddWithValue("@ProveedorId", entity.ProveedorId);
-                    cmd.Parameters.AddWithValue("@UsuarioId", entity.UsuarioId);
+                    cmd.Parameters.AddWithValue("@Cantidad", entity.Cantidad);
+                    cmd.Parameters.AddWithValue("@ProductoId", entity.ProductoId);
+                    cmd.Parameters.AddWithValue("@PrecioCompra", entity.PrecioCompra);
+                    cmd.Parameters.AddWithValue("@SubTotal", entity.SubTotal);
 
                     conn.Open();
                     result = Convert.ToInt32(cmd.ExecuteScalar());

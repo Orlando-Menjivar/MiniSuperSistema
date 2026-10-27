@@ -38,10 +38,11 @@ namespace MiniSuper.DataAccess
                             Compra entity = new Compra
                             {
                                 CompraId = rd.GetInt32(0),
-                                NombreFactura = rd.GetString(1),
-                                FechaHora = rd.GetDateTime(2),
-                                DetalleVentaId = rd.GetInt32(3),
-                                UsuarioId = rd.GetInt32(4)
+                                FechaHora = rd.GetDateTime(1),
+                                NumeroFactura = rd.GetString(2),
+                                ProveedorId = rd.GetInt32(3),
+                                UsuarioId = rd.GetInt32(4),
+                                Total = rd.GetDecimal(5)
                             };
                             result.Add(entity);
                         }
@@ -70,10 +71,11 @@ namespace MiniSuper.DataAccess
                             entity = new Compra
                             {
                                 CompraId = rd.GetInt32(0),
-                                NombreFactura = rd.GetString(1),
-                                FechaHora = rd.GetDateTime(2),
-                                DetalleVentaId = rd.GetInt32(3),
-                                UsuarioId = rd.GetInt32(4)
+                                FechaHora = rd.GetDateTime(1),
+                                NumeroFactura = rd.GetString(2),
+                                ProveedorId = rd.GetInt32(3),
+                                UsuarioId = rd.GetInt32(4),
+                                Total = rd.GetDecimal(5)
                             };
                         }
                     }
@@ -91,10 +93,11 @@ namespace MiniSuper.DataAccess
                 using (SqlCommand cmd = new SqlCommand("SpCompraInsert", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@NombreFactura", entity.NombreFactura);
                     cmd.Parameters.AddWithValue("@FechaHora", entity.FechaHora);
-                    cmd.Parameters.AddWithValue("@DetalleVentaId", entity.DetalleVentaId);
+                    cmd.Parameters.AddWithValue("@NumeroFactura", entity.NumeroFactura);
+                    cmd.Parameters.AddWithValue("@ProveedorId", entity.ProveedorId);
                     cmd.Parameters.AddWithValue("@UsuarioId", entity.UsuarioId);
+                    cmd.Parameters.AddWithValue("@Total", entity.Total);
 
                     conn.Open();
                     result = Convert.ToInt32(cmd.ExecuteScalar());

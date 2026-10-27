@@ -45,7 +45,7 @@ namespace MiniSuper.DataAccess
                                 MontoRecibido = rd.GetDecimal(4),
                                 Cambio = rd.GetDecimal(5),
                                 DuiTitular = rd.GetString(6),
-                                FirmaTitular = rd.GetString(7)
+                                FirmaTitular = rd.GetBoolean(7)
 
                             };
                             result.Add(entity);
@@ -79,7 +79,7 @@ namespace MiniSuper.DataAccess
                                 MontoRecibido = rd.GetDecimal(4),
                                 Cambio = rd.GetDecimal(5),
                                 DuiTitular = rd.GetString(6),
-                                FirmaTitular = rd.GetString(7)
+                                FirmaTitular = rd.GetBoolean(7)
                             };
                         }
                     }

@@ -38,7 +38,8 @@ namespace MiniSuper.DataAccess
                             Cargo entity = new Cargo
                             {
                                 CargoId = rd.GetInt32(0),
-                                NombreCargo = rd.GetString(1)
+                                NombreCargo = rd.GetString(1),
+                                EstadoId = rd.GetInt32(2)
                             };
                             result.Add(entity);
                         }
@@ -69,7 +70,8 @@ namespace MiniSuper.DataAccess
                             entity = new Cargo
                             {
                                 CargoId = rd.GetInt32(0),
-                                NombreCargo = rd.GetString(1)
+                                NombreCargo = rd.GetString(1),
+                                EstadoId = rd.GetInt32(2)
                             };
                         }
                     }
@@ -88,6 +90,7 @@ namespace MiniSuper.DataAccess
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@NombreCargo", entity.NombreCargo);
+                    cmd.Parameters.AddWithValue("@EstadoId", entity.EstadoId);
                     conn.Open();
                     result = Convert.ToInt32(cmd.ExecuteScalar());
                 }
@@ -106,6 +109,7 @@ namespace MiniSuper.DataAccess
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@CargoId", entity.CargoId);
                     cmd.Parameters.AddWithValue("@NombreCargo", entity.NombreCargo);
+                    cmd.Parameters.AddWithValue("@EstadoId", entity.EstadoId);
                     conn.Open();
                     result = cmd.ExecuteNonQuery();
                 }

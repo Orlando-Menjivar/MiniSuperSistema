@@ -42,7 +42,8 @@ namespace MiniSuper.DataAccess
                             {
                                 RolId = rd.GetInt32(0),
                                 TipoRol= rd.GetString(1),
-                                descripcion = rd.GetString(2)
+                                Descripcion = rd.GetString(2),
+                                EstadoId = rd.GetInt32(3)
                             };
                             result.Add(entity);
                         }
@@ -70,7 +71,8 @@ namespace MiniSuper.DataAccess
                             {
                                 RolId = rd.GetInt32(0),
                                 TipoRol = rd.GetString(1),
-                                descripcion = rd.GetString(2)
+                                Descripcion = rd.GetString(2),
+                                EstadoId = rd.GetInt32(3)
                             };
                         }
                     }
@@ -88,7 +90,8 @@ namespace MiniSuper.DataAccess
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@TipoRol", entity.TipoRol);
-                    cmd.Parameters.AddWithValue("@descripcion", entity.descripcion);
+                    cmd.Parameters.AddWithValue("@descripcion", entity.Descripcion);
+                    cmd.Parameters.AddWithValue("@estadoId", entity.EstadoId);
                     conn.Open();
                     result = Convert.ToInt32(cmd.ExecuteScalar());
                 }
@@ -107,7 +110,8 @@ namespace MiniSuper.DataAccess
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@RolId", entity.RolId);
                     cmd.Parameters.AddWithValue("@TipoRol", entity.TipoRol);
-                    cmd.Parameters.AddWithValue("@descripcion", entity.descripcion);
+                    cmd.Parameters.AddWithValue("@descripcion", entity.Descripcion);
+                    cmd.Parameters.AddWithValue("@estadoId", entity.EstadoId);
                     conn.Open();
                     result = cmd.ExecuteNonQuery();
                 }

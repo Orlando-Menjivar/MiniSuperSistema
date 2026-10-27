@@ -46,7 +46,8 @@ namespace MiniSuper.DataAccess
                                 Telefono = rd.GetString(6),
                                 Correo = rd.GetString(7),
                                 Direccion = rd.GetString(8),
-                                CargoId = rd.GetInt32(9)
+                                CargoId = rd.GetInt32(9),
+                                EstadoUsuarioId = rd.GetInt32(10)
                             };
                             result.Add(entity);
                         }
@@ -83,7 +84,8 @@ namespace MiniSuper.DataAccess
                                 Telefono = rd.GetString(6),
                                 Correo = rd.GetString(7),
                                 Direccion = rd.GetString(8),
-                                CargoId = rd.GetInt32(9)
+                                CargoId = rd.GetInt32(9),
+                                EstadoUsuarioId = rd.GetInt32(10)
                             };
                         }
                     }
@@ -110,6 +112,7 @@ namespace MiniSuper.DataAccess
                     cmd.Parameters.AddWithValue("@Correo", entity.Correo);
                     cmd.Parameters.AddWithValue("@Direccion", entity.Direccion);
                     cmd.Parameters.AddWithValue("@CargoId", entity.CargoId);
+                    cmd.Parameters.AddWithValue("@EstadoUsuarioId", entity.EstadoUsuarioId);
 
                     conn.Open();
                     result = Convert.ToInt32(cmd.ExecuteScalar());
@@ -137,6 +140,7 @@ namespace MiniSuper.DataAccess
                     cmd.Parameters.AddWithValue("@Correo", entity.Correo);
                     cmd.Parameters.AddWithValue("@Direccion", entity.Direccion);
                     cmd.Parameters.AddWithValue("@CargoId", entity.CargoId);
+                    cmd.Parameters.AddWithValue("@EstadoUsuarioId", entity.EstadoUsuarioId);
 
                     conn.Open();
                     result = cmd.ExecuteNonQuery();

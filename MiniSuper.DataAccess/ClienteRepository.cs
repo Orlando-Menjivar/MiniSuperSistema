@@ -39,7 +39,8 @@ namespace MiniSuper.DataAccess
                             Cliente entity = new Cliente
                             {
                                 ClienteId = rd.GetInt32(0),
-                                DUI = rd.GetString(1)
+                                TipoCliente = rd.GetString(1),
+                                DUI = rd.GetString(2)
                             };
                             result.Add(entity);
                         }
@@ -68,7 +69,8 @@ namespace MiniSuper.DataAccess
                             entity = new Cliente
                             {
                                 ClienteId = rd.GetInt32(0),
-                                DUI = rd.GetString(1)
+                                TipoCliente = rd.GetString(1),
+                                DUI = rd.GetString(2)
                             };
                         }
                     }
@@ -86,6 +88,7 @@ namespace MiniSuper.DataAccess
                 using (SqlCommand cmd = new SqlCommand("SpClienteInsert", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@TipoCliente", entity.TipoCliente);
                     cmd.Parameters.AddWithValue("@DUI", entity.DUI);
                     conn.Open();
                     result = Convert.ToInt32(cmd.ExecuteScalar());
@@ -104,6 +107,7 @@ namespace MiniSuper.DataAccess
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ClienteId", entity.ClienteId);
+                    cmd.Parameters.AddWithValue("@TipoCliente", entity.TipoCliente);
                     cmd.Parameters.AddWithValue("@DUI", entity.DUI);
                     conn.Open();
                     result = cmd.ExecuteNonQuery();
