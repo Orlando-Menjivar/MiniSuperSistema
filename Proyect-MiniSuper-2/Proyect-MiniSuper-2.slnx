@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../MiniSuper.BussinesLogic/MiniSuper.BussinesLogic.csproj" />
+  <Project Path="../MiniSuper.DataAccess/MiniSuper.DataAccess.csproj" />
+  <Project Path="../MiniSuper.Desktop/MiniSuper.Desktop.csproj" />
+  <Project Path="../MiniSuper.Entity/MiniSuper.Entity.csproj" />
+</Solution>
