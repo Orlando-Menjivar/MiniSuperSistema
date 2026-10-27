@@ -64,6 +64,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorRepository.cs" />
     <Compile Include="RolRepository.cs" />
+    <Compile Include="TipoMovimientoInventarioRepository.cs" />
     <Compile Include="UsuarioRepository.cs" />
     <Compile Include="VentaRepository.cs" />
   </ItemGroup>
