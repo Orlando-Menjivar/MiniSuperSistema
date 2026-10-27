@@ -9,6 +9,8 @@ namespace MiniSuper.Entity
     public class Cliente
     {
         public int ClienteId { get; set; }
+
+        public string TipoCliente { get; set; }
         public string DUI { get; set; }
     }
 }

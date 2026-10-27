@@ -10,6 +10,7 @@ namespace MiniSuper.Entity
     {
         public int RolId { get; set; }
         public string TipoRol { get; set; }
-        public string descripcion { get; set; }
+        public string Descripcion { get; set; }
+        public int EstadoId { get; set; }
     }
 }

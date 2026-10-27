@@ -19,5 +19,6 @@ namespace MiniSuper.Entity
         public string Telefono { get; set; }
         public string Correo { get; set; }
         public string Direccion { get; set; }
+        public int EstadoProveedorId { get; set; }
     }
 }

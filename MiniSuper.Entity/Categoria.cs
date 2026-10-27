@@ -10,6 +10,7 @@ namespace MiniSuper.Entity
     {
         public int CategoriaId { get; set; }
         public string NombreCategoria { get; set; }
+        public int EstadoId { get; set; }
 
     }
 }

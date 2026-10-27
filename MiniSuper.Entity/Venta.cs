@@ -13,7 +13,7 @@ namespace MiniSuper.Entity
         public int NumeroTicket { get; set; }
         public int UsuarioId { get; set; }
         public int ClienteId { get; set; }
-        public decimal IVA { get; set; }
+        public decimal Iva { get; set; }
         public decimal Subtotal { get; set; }
         public decimal Total { get; set; }
     }

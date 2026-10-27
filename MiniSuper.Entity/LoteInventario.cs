@@ -11,6 +11,7 @@ namespace MiniSuper.Entity
         public int LoteInventarioId { get; set; }
         public int DetCompraId { get; set; }
         public DateTime FechaIngreso { get; set; }
+        public DateTime FechaCaducidad { get; set; }
         public int StockInicialLote { get; set; }
         public int StockActualLote { get; set; }
     }

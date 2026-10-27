@@ -14,7 +14,7 @@ namespace MiniSuper.Entity
         public string NombreProducto { get; set; }
         public string UnidadMedida { get; set; }
         public decimal PrecioVenta { get; set; }
-        public int EstadoProductoId { get; set; }
         public int CategoriaId { get; set; }
+        public int EstadoProductoId { get; set; }
     }
 }

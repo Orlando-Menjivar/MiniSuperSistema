@@ -10,10 +10,10 @@ namespace MiniSuper.Entity
 
     {
         public int CompraId { get; set; }
-        public string NombreFactura { get; set; }
-
         public DateTime FechaHora { get; set; }
-        public int DetalleVentaId { get; set; }
+        public string NumeroFactura { get; set; }
+        public int ProveedorId { get; set; }
         public int UsuarioId { get; set; }
+        public decimal Total { get; set; }
     }
 }
