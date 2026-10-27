@@ -11,5 +11,7 @@ namespace MiniSuper.Entity
     {
         public int CargoId { get; set; }
         public string NombreCargo { get; set; }
+
+        public int EstadoId { get; set; }
     }
 }
