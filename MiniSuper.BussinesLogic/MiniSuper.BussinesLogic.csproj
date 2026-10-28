@@ -50,6 +50,7 @@
     <Compile Include="DetalleInventarioBL.cs" />
     <Compile Include="DetalleVentaBL.cs" />
     <Compile Include="EmpleadoBL.cs" />
+    <Compile Include="EstadoBL.cs" />
     <Compile Include="EstadoProductoBL.cs" />
     <Compile Include="EstadoProveedorBL.cs" />
     <Compile Include="EstadoUsuarioBL.cs" />

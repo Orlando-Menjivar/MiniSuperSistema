@@ -18,7 +18,7 @@ namespace MiniSuper.DataAccess
             _connectionFactory = connectionFactory;
         }
 
-        public List<Estado> Selectall()
+        public List<Estado> SelectAll()
         {
             List<Estado> result = null;
             using (SqlConnection conn = _connectionFactory.CreateConnection())
