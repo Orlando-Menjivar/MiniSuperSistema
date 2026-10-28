@@ -51,6 +51,7 @@
     <Compile Include="DetalleVentaBL.cs" />
     <Compile Include="EmpleadoBL.cs" />
     <Compile Include="EstadoProductoBL.cs" />
+    <Compile Include="EstadoProveedorBL.cs" />
     <Compile Include="EstadoUsuarioBL.cs" />
     <Compile Include="FormaPagoBL.cs" />
     <Compile Include="InventarioBL.cs" />
