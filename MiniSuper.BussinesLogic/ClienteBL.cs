@@ -28,7 +28,21 @@ namespace MiniSuper.BussinesLogic
             return result;
         }
 
-        public int Insert(Rol entity)
+        public Cliente Select(int clienteId)
+        {
+            Cliente entity = null;
+            try
+            {
+                entity = _Repository.Select(clienteId);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return entity;
+        }
+
+        public int Insert(Cliente entity)
         {
             int result;
             try
@@ -42,7 +56,33 @@ namespace MiniSuper.BussinesLogic
             return result;
         }
 
+        public int Update(Cliente entity)
+        {
+            int result;
+            try
+            {
+                result = _Repository.Update(entity);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return result;
+        }
 
+        public int Delete(int clienteId)
+        {
+            int result;
+            try
+            {
+                result = _Repository.Delete(clienteId);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return result;
+        }
 
 
 

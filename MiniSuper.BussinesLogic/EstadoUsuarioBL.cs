@@ -28,6 +28,20 @@ namespace MiniSuper.BussinesLogic
             return result;
         }
 
+        public EstadoUsuario Select(int estadoUsuarioId)
+        {
+            EstadoUsuario entity = null;
+            try
+            {
+                entity = _Repository.Select(estadoUsuarioId);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return entity;
+        }
+
         public int Insert(EstadoUsuario entity)
         {
             int result;
@@ -43,7 +57,33 @@ namespace MiniSuper.BussinesLogic
         }
 
 
+        public int Update(EstadoUsuario entity)
+        {
+            int result;
+            try
+            {
+                result = _Repository.Update(entity);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return result;
+        }
 
+        public int Delete(int estadoUsuarioId)
+        {
+            int result;
+            try
+            {
+                result = _Repository.Delete(estadoUsuarioId);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return result;
+        }
 
 
     }

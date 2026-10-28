@@ -28,6 +28,20 @@ namespace MiniSuper.BussinesLogic
             return result;
         }
 
+        public LoteInventario Select(int loteInventarioId)
+        {
+            LoteInventario entity = null;
+            try
+            {
+                entity = _Repository.Select(loteInventarioId);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return entity;
+        }
+
         public int Insert(LoteInventario entity)
         {
             int result;

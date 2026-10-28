@@ -31,5 +31,63 @@ namespace MiniSuper.BussinesLogic
 
             return result;
         }
+
+        public Empleado Select(int empleadoId)
+        {
+            Empleado entity = null;
+            try
+            {
+                entity = _repository.Select(empleadoId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return entity;
+        }
+
+        public int Insert(Empleado entity)
+        {
+            int result;
+            try
+            {
+                result = _repository.Insert(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
+
+        public int Update(Empleado entity)
+        {
+            int result;
+            try
+            {
+                result = _repository.Update(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
+
+        public int Delete(int empleadoId)
+        {
+            int result;
+            try
+            {
+                result = _repository.Delete(empleadoId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
     }
 }

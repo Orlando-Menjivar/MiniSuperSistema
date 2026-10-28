@@ -29,12 +29,54 @@ namespace MiniSuper.BusinessLogic
             return result;
         }
 
+        public Categoria Select(int categoriaId)
+        {
+            Categoria entity = null;
+            try
+            {
+                entity = _repository.Select(categoriaId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return entity;
+        }
+
         public int Insert(Categoria entity)
         {
-            int result = 0;
+            int result;
             try
             {
                 result = _repository.Insert(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
+        public int Update(Categoria entity)
+        {
+            int result;
+            try
+            {
+                result = _repository.Update(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
+        public int Delete(int categoriaId)
+        {
+            int result;
+            try
+            {
+                result = _repository.Delete(categoriaId);
             }
             catch (Exception ex)
             {

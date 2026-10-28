@@ -48,10 +48,38 @@ namespace MiniSuper.BussinesLogic
 
         public int Insert(Cargo entity)
         {
-            int result = 0;
+            int result;
             try
             {
                 result = _repository.Insert(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
+        public int Update(Cargo entity)
+        {
+            int result;
+            try
+            {
+                result = _repository.Update(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
+        public int Delete(int cargoId)
+        {
+            int result;
+            try
+            {
+                result = _repository.Delete(cargoId);
             }
             catch (Exception ex)
             {

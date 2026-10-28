@@ -28,6 +28,20 @@ namespace MiniSuper.BussinesLogic
             return result;
         }
 
+        public DetalleCompra Select(int detalleCompraId)
+        {
+            DetalleCompra entity = null;
+            try
+            {
+                entity = _Repository.Select(detalleCompraId);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return entity;
+        }
+
         public int Insert(DetalleCompra entity)
         {
             int result;
@@ -41,9 +55,6 @@ namespace MiniSuper.BussinesLogic
             }
             return result;
         }
-
-
-
 
 
     }

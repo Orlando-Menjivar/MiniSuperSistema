@@ -28,5 +28,33 @@ namespace Super.BusinessLogic
 
             return result;
         }
+
+        public Inventario Select(int inventarioId)
+        {
+            Inventario entity = null;
+            try
+            {
+                entity = _repository.Select(inventarioId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return entity;
+        }
+
+        public int Insert(Inventario entity)
+        {
+            int result;
+            try
+            {
+                result = _repository.Insert(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
     }
 }

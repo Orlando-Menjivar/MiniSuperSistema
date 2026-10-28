@@ -28,5 +28,62 @@ namespace Super.BusinessLogic
 
             return result;
         }
+
+        public Negocio Select(int negocioId)
+        {
+            Negocio entity = null;
+            try
+            {
+                entity = _repository.Select(negocioId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return entity;
+        }
+
+
+        public int Insert(Negocio entity)
+        {
+            int result;
+            try
+            {
+                result = _repository.Insert(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
+        public int Update(Negocio entity)
+        {
+            int result;
+            try
+            {
+                result = _repository.Update(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
+        public int Delete(int negocioId)
+        {
+            int result;
+            try
+            {
+                result = _repository.Delete(negocioId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
     }
 }

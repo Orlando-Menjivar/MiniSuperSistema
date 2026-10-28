@@ -28,5 +28,62 @@ namespace MiniSuper.BusinessLogic
 
             return result;
         }
+
+        public Proveedor Select(int proveedorId)
+        {
+            Proveedor entity = null;
+            try
+            {
+                entity = _repository.Select(proveedorId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return entity;
+        }
+
+
+        public int Insert(Proveedor entity)
+        {
+            int result;
+            try
+            {
+                result = _repository.Insert(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
+        public int Update(Proveedor entity)
+        {
+            int result;
+            try
+            {
+                result = _repository.Update(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
+        public int Delete(int proveedorId)
+        {
+            int result;
+            try
+            {
+                result = _repository.Delete(proveedorId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
     }
 }

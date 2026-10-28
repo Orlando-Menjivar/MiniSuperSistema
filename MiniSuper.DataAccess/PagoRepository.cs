@@ -110,5 +110,44 @@ namespace MiniSuper.DataAccess
             return result;
         }
 
+        public int Update(Pago entity)
+        {
+            int result = 0;
+            using (SqlConnection conn = _connectionFactory.CreateConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand("SpPagoUpdate", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@PagoId", entity.PagoId);
+                    cmd.Parameters.AddWithValue("@VentaId", entity.VentaId);
+                    cmd.Parameters.AddWithValue("@FormaPagoId", entity.FormaPagoId);
+                    cmd.Parameters.AddWithValue("@Monto", entity.Monto);
+                    cmd.Parameters.AddWithValue("@MontoRecibido", entity.MontoRecibido);
+                    cmd.Parameters.AddWithValue("@Cambio", entity.Cambio);
+                    cmd.Parameters.AddWithValue("@DuiTitular", entity.DuiTitular);
+                    cmd.Parameters.AddWithValue("@FirmaTitular", entity.FirmaTitular);
+                    conn.Open();
+                    result = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+            return result;
+        }
+
+        public int Delete(int pagoId)
+        {
+            int result = 0;
+            using (SqlConnection conn = _connectionFactory.CreateConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand("SpPagoDelete", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@PagoId", pagoId);
+                    conn.Open();
+                    result = cmd.ExecuteNonQuery();
+                }
+            }
+            return result;
+        }
+
     }
 }

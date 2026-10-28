@@ -28,5 +28,34 @@ namespace MiniSuper.BusinessLogic
 
             return result;
         }
+
+        public Compra Select(int compraId)
+        {
+            Compra entity = null;
+            try
+            {
+                entity = _repository.Select(compraId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return entity;
+        }
+
+        public int Insert(Compra entity)
+        {
+            int result;
+            try
+            {
+                result = _repository.Insert(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
     }
 }
