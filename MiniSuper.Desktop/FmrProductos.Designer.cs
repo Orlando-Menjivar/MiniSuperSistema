@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             lostBorderPanel1 = new ReaLTaiizor.Controls.LostBorderPanel();
+            bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
             foreverButton1 = new ReaLTaiizor.Controls.ForeverButton();
             dungeonTextBox1 = new ReaLTaiizor.Controls.DungeonTextBox();
             bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
-            bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             foreverButton2 = new ReaLTaiizor.Controls.ForeverButton();
-            foreverButton3 = new ReaLTaiizor.Controls.ForeverButton();
             foreverButton4 = new ReaLTaiizor.Controls.ForeverButton();
             foreverButton5 = new ReaLTaiizor.Controls.ForeverButton();
+            foreverButton3 = new ReaLTaiizor.Controls.ForeverButton();
             lostBorderPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             SuspendLayout();
@@ -62,6 +62,18 @@
             lostBorderPanel1.Size = new Size(1160, 175);
             lostBorderPanel1.TabIndex = 1;
             lostBorderPanel1.Text = "lostBorderPanel1";
+            // 
+            // bigLabel2
+            // 
+            bigLabel2.AutoSize = true;
+            bigLabel2.BackColor = Color.Transparent;
+            bigLabel2.Font = new Font("Segoe UI", 25F);
+            bigLabel2.ForeColor = Color.White;
+            bigLabel2.Location = new Point(311, 18);
+            bigLabel2.Name = "bigLabel2";
+            bigLabel2.Size = new Size(528, 46);
+            bigLabel2.TabIndex = 3;
+            bigLabel2.Text = "Gestión de productos e inventario";
             // 
             // foreverButton1
             // 
@@ -106,39 +118,28 @@
             bigLabel1.TabIndex = 0;
             bigLabel1.Text = "Buscar por nombre o codigo:";
             // 
-            // bigLabel2
-            // 
-            bigLabel2.AutoSize = true;
-            bigLabel2.BackColor = Color.Transparent;
-            bigLabel2.Font = new Font("Segoe UI", 25F);
-            bigLabel2.ForeColor = Color.White;
-            bigLabel2.Location = new Point(311, 18);
-            bigLabel2.Name = "bigLabel2";
-            bigLabel2.Size = new Size(528, 46);
-            bigLabel2.TabIndex = 3;
-            bigLabel2.Text = "Gestión de productos e inventario";
-            // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle4.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            guna2DataGridView1.ColumnHeadersHeight = 4;
+            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView1.Location = new Point(39, 236);
             guna2DataGridView1.Name = "guna2DataGridView1";
@@ -147,7 +148,6 @@
             guna2DataGridView1.TabIndex = 2;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
             guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
             guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
@@ -164,20 +164,6 @@
             foreverButton2.TabIndex = 4;
             foreverButton2.Text = "Agregar producto";
             foreverButton2.TextColor = Color.FromArgb(243, 243, 243);
-            // 
-            // foreverButton3
-            // 
-            foreverButton3.BackColor = Color.Transparent;
-            foreverButton3.BaseColor = Color.SteelBlue;
-            foreverButton3.Font = new Font("Segoe UI", 12F);
-            foreverButton3.Location = new Point(346, 582);
-            foreverButton3.Name = "foreverButton3";
-            foreverButton3.Rounded = false;
-            foreverButton3.Size = new Size(120, 40);
-            foreverButton3.TabIndex = 5;
-            foreverButton3.Text = "Editar";
-            foreverButton3.TextColor = Color.FromArgb(243, 243, 243);
-            foreverButton3.Click += this.foreverButton3_Click;
             // 
             // foreverButton4
             // 
@@ -206,14 +192,27 @@
             foreverButton5.Text = "Regresar";
             foreverButton5.TextColor = Color.FromArgb(243, 243, 243);
             // 
+            // foreverButton3
+            // 
+            foreverButton3.BackColor = Color.Transparent;
+            foreverButton3.BaseColor = Color.SteelBlue;
+            foreverButton3.Font = new Font("Segoe UI", 12F);
+            foreverButton3.Location = new Point(346, 582);
+            foreverButton3.Name = "foreverButton3";
+            foreverButton3.Rounded = false;
+            foreverButton3.Size = new Size(120, 40);
+            foreverButton3.TabIndex = 8;
+            foreverButton3.Text = "Editar";
+            foreverButton3.TextColor = Color.FromArgb(243, 243, 243);
+            // 
             // FmrProductos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1156, 699);
+            ClientSize = new Size(1231, 699);
+            Controls.Add(foreverButton3);
             Controls.Add(foreverButton5);
             Controls.Add(foreverButton4);
-            Controls.Add(foreverButton3);
             Controls.Add(foreverButton2);
             Controls.Add(guna2DataGridView1);
             Controls.Add(lostBorderPanel1);
@@ -227,6 +226,11 @@
             ResumeLayout(false);
         }
 
+        private void foreverButton3_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private ReaLTaiizor.Controls.LostBorderPanel lostBorderPanel1;
@@ -236,8 +240,8 @@
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private ReaLTaiizor.Controls.ForeverButton foreverButton2;
-        private ReaLTaiizor.Controls.ForeverButton foreverButton3;
         private ReaLTaiizor.Controls.ForeverButton foreverButton4;
         private ReaLTaiizor.Controls.ForeverButton foreverButton5;
+        private ReaLTaiizor.Controls.ForeverButton foreverButton3;
     }
 }
