@@ -177,7 +177,7 @@
             foreverButton3.TabIndex = 5;
             foreverButton3.Text = "Editar";
             foreverButton3.TextColor = Color.FromArgb(243, 243, 243);
-            foreverButton3.Click += this.foreverButton3_Click;
+            //foreverButton3.Click += this.foreverButton3_Click;
             // 
             // foreverButton4
             // 
